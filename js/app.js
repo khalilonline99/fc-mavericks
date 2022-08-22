@@ -40,3 +40,5 @@ document.getElementById('btn-player-3').addEventListener('click',function(){
     selectedField.innerHTML = selectedField.innerHTML + "<li>" + namePlayerText + "</li>";
     
 })
+
+// test of pushs 
