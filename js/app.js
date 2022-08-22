@@ -67,22 +67,31 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
 
 
 document.getElementById('btn-calculate-total').addEventListener('click', function(){
-    const costManager = document.getElementById('cost-manager');
-    const costManagerString = costManager.value;
-    const costManagerNumber = parseFloat(costManagerString);
-    costManager.value = '';
-
-    const costCoach = document.getElementById('cost-coach');
-    const costCoachString = costCoach.value;
-    const costCoachNumber = parseFloat(costCoachString);
-    costCoach.value = '';
-
     const totalAmountPlayers = document.getElementById('amount-total-player');
     const totalAmountPlayersString = totalAmountPlayers.innerText;
     const totalAmountPlayersNumber = parseFloat(totalAmountPlayersString);
 
-    const totalFinal = totalAmountPlayersNumber + costManagerNumber + costCoachNumber;
+    if (totalAmountPlayersNumber > 0){
+        const costManager = document.getElementById('cost-manager');
+        const costManagerString = costManager.value;
+        const costManagerNumber = parseFloat(costManagerString);
+        costManager.value = '';
     
-    const totalFinalAmountDisplay = document.getElementById('total-amount-display');
-    totalFinalAmountDisplay.innerText = totalFinal;
+        const costCoach = document.getElementById('cost-coach');
+        const costCoachString = costCoach.value;
+        const costCoachNumber = parseFloat(costCoachString);
+        costCoach.value = '';
+    
+        
+    
+        const totalFinal = totalAmountPlayersNumber + costManagerNumber + costCoachNumber;
+        
+        const totalFinalAmountDisplay = document.getElementById('total-amount-display');
+        totalFinalAmountDisplay.innerText = totalFinal;
+    }
+    else{
+        alert('Please choose players first and add budget for per player.')
+    }
+
+   
 })
