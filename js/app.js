@@ -49,12 +49,13 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
     const playerBudgetString = playerBudget.value;
 
     if (isNaN(playerBudgetString) === false){
-        const playerBudgetNumber = parseInt(playerBudgetString);
+        const playerBudgetNumber = parseFloat(playerBudgetString);
         const selectedPlayersNo = document.getElementById('player-selected').getElementsByTagName('li').length;
-        const totalAmount = selectedPlayersNo * playerBudgetNumber;
+        const totalAmountPlayers = selectedPlayersNo * playerBudgetNumber;
+        playerBudget.value = '';
 
         const totalAmountDisplay = document.getElementById('amount-total-player');
-        totalAmountDisplay.innerText = totalAmount;
+        totalAmountDisplay.innerText = totalAmountPlayers;
 
         console.log(totalAmount);
     }
@@ -62,4 +63,26 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
         alert('Please give numbers only');
     }
     
+})
+
+
+document.getElementById('btn-calculate-total').addEventListener('click', function(){
+    const costManager = document.getElementById('cost-manager');
+    const costManagerString = costManager.value;
+    const costManagerNumber = parseFloat(costManagerString);
+    costManager.value = '';
+
+    const costCoach = document.getElementById('cost-coach');
+    const costCoachString = costCoach.value;
+    const costCoachNumber = parseFloat(costCoachString);
+    costCoach.value = '';
+
+    const totalAmountPlayers = document.getElementById('amount-total-player');
+    const totalAmountPlayersString = totalAmountPlayers.innerText;
+    const totalAmountPlayersNumber = parseFloat(totalAmountPlayersString);
+
+    const totalFinal = totalAmountPlayersNumber + costManagerNumber + costCoachNumber;
+    
+    const totalFinalAmountDisplay = document.getElementById('total-amount-display');
+    totalFinalAmountDisplay.innerText = totalFinal;
 })

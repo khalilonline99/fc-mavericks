@@ -1,3 +1,8 @@
+function alertMessage() {
+    alert('Warning!! You cannot select more than Five Players');
+}
+
+
 function selectPlayer(playerName, playerSelected, buttonCardPlayer){
 
     const lengthPlayers = document.getElementById('player-selected').getElementsByTagName('li').length;
@@ -18,8 +23,8 @@ function selectPlayer(playerName, playerSelected, buttonCardPlayer){
         }
     }
     else{
-
-        alert('Warning!! You cannot select more than Five Players');
+        alertMessage();
     }
     
 }
+
