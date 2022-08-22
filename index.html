@@ -40,30 +40,32 @@
                 <div class="grid grid-cols-3 gap-4 mr-4">
                     <div class="border-2 border-white rounded p-1 bg-zinc-900 flex flex-col items-stretch">
                         <img src="images/cards/player-1.png" alt="messi soccer player">
-                        <h2 class="text-white text-center text-xl mt-2 font-semibold">Lionel Messi</h2>
+                        <h2 id="name-player-1" class="text-white text-center text-xl mt-2 font-semibold">Lionel Messi</h2>
                         <div class="text-slate-400 w-auto flex flex-row items-center justify-center mb-2">
                             <p class="mr-5">98 Goals</p>
                             <p>120 Assist</p>
                         </div>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">SELECT</button>
+                        <button id="btn-player-1" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">SELECT</button>
                     </div>
+
                     <div class="border-2 border-white rounded p-1 bg-zinc-900 flex flex-col items-stretch">
                         <img src="images/cards/player-2.png" alt="messi soccer player">
-                        <h2 class="text-white text-center text-xl mt-2 font-semibold">Neymar Jr</h2>
+                        <h2 id="name-player-2" class="text-white text-center text-xl mt-2 font-semibold">Neymar Jr</h2>
                         <div class="text-slate-400 w-auto flex flex-row items-center justify-center">
                             <p class="mr-5">98 Goals</p>
                             <p>120 Assist</p>
                         </div>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 tracking-wide">SELECT</button>
+                        <button id="btn-player-2" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3">SELECT</button>
                     </div>
+
                     <div class="border-2 border-white rounded p-1 bg-zinc-900 flex flex-col items-stretch">
                         <img src="images/cards/player-3.png" alt="messi soccer player">
-                        <h2 class="text-white text-center text-xl mt-2 font-semibold">Kylian Mbappé</h2>
+                        <h2 id="name-player-3" class="text-white text-center text-xl mt-2 font-semibold">Kylian Mbappé</h2>
                         <div class="text-slate-400 w-auto flex flex-row items-center justify-center">
                             <p class="mr-5">98 Goals</p>
                             <p>120 Assist</p>
                         </div>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 tracking-wide">SELECT</button>
+                        <button id="btn-player-3" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 tracking-wide">SELECT</button>
                     </div>
                     <div class="border-2 border-white rounded p-1 bg-zinc-900 flex flex-col items-stretch">
                         <img src="images/cards/player-4.png" alt="messi soccer player">
@@ -94,7 +96,7 @@
                     </div>
                     <div class="border-2 border-white rounded p-1 bg-zinc-900 flex flex-col items-stretch">
                         <img src="images/cards/player-7.png" alt="messi soccer player">
-                        <h2 class="text-white text-center text-xl mt-2 font-semibold">Lionel Messi</h2>
+                        <h2 class="text-white text-center text-xl mt-2 font-semibold">Lionel Rossi</h2>
                         <div class="text-slate-400 w-auto flex flex-row items-center justify-center">
                             <p class="mr-5">98 Goals</p>
                             <p>120 Assist</p>
@@ -103,7 +105,7 @@
                     </div>
                     <div class="border-2 border-white rounded p-1 bg-zinc-900 flex flex-col items-stretch">
                         <img src="images/cards/player-8.png" alt="messi soccer player">
-                        <h2 class="text-white text-center text-xl mt-2 font-semibold">Neymar Jr</h2>
+                        <h2 class="text-white text-center text-xl mt-2 font-semibold">Seimar Sr</h2>
                         <div class="text-slate-400 w-auto flex flex-row items-center justify-center">
                             <p class="mr-5">98 Goals</p>
                             <p>120 Assist</p>
@@ -112,7 +114,7 @@
                     </div>
                     <div class="border-2 border-white rounded p-1 bg-zinc-900 flex flex-col items-stretch">
                         <img src="images/cards/player-9.png" alt="messi soccer player">
-                        <h2 class="text-white text-center text-xl mt-2 font-semibold">Kylian Mbappé</h2>
+                        <h2 class="text-white text-center text-xl mt-2 font-semibold">Ore bappé</h2>
                         <div class="text-slate-400 w-auto flex flex-row items-center justify-center">
                             <p class="mr-5">98 Goals</p>
                             <p>120 Assist</p>
@@ -126,18 +128,18 @@
             <!-- calculator part  -->
                 <div class="flex flex-col h-4/5 m-0">
                     <div class="text-white bg-zinc-900 text-center p-2 rounded w-auto h-auto mb-4">
-                        <h1 class="font-bold text-xl text-amber-500 my-2">Selected Players</h1>
+                        <h1 class="font-bold text-xl text-amber-500 my-2">Selected Players:</h1>
     
                         <!-- <ul class="list-disc block text-center">
                             <li>One Player</li>
                             <li>Two Player</li>
                             <li>Three Player</li>
                         </ul> -->
-                        <ol>
-                            <li>player-1</li>
-                            <li>player-2</li>
-                            <li>player-3</li>
-                            <li>player-4</li>
+                        <ol id="player-selected">
+                            <li id="player-selected-one"></li>
+                            <li id="player-selected-two"></li>
+                            <li></li>
+                            <li></li>
                         </ol>
                     </div>
                     
