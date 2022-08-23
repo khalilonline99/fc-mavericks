@@ -39,7 +39,7 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
     const playerBudget = document.getElementById('player-budget');
     const playerBudgetString = playerBudget.value;
     const selectedPlayersNo = document.getElementById('player-selected').getElementsByTagName('li').length;
-    if (selectedPlayersNo === 5) {
+    
         if (playerBudgetString !== '') {
             if (isNaN(playerBudgetString) === false){
                 const playerBudgetNumber = parseFloat(playerBudgetString);
@@ -50,19 +50,12 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
                 totalAmountDisplay.innerText = totalAmountPlayers;
             }
             else{
-                alert('Please give numbers onlys in Per Player.');
+                alert('Please give numbers only in Per Player.');
             }
         }
         else {
             alert('Please give your budget Per Player.');
-        }
-    }
-    else{
-        const remainingPlayersToSelect = 5 - selectedPlayersNo;
-        alert('You have choosen only ' + selectedPlayersNo + ' players. ' + 'Please choose ' + remainingPlayersToSelect + ' more players.');
-    }
-
-    
+        }    
     
 })
 
@@ -86,11 +79,14 @@ document.getElementById('btn-calculate-total').addEventListener('click', functio
                 
                     const costCoachNumber = parseFloat(costCoachString);
                     costCoach.value = '';
-                
-                    const totalFinal = totalAmountPlayersNumber + costManagerNumber + costCoachNumber;
                     
+                        
+                    const totalFinal = totalAmountPlayersNumber + costManagerNumber + costCoachNumber;
+                        
+                        
                     const totalFinalAmountDisplay = document.getElementById('total-amount-display');
                     totalFinalAmountDisplay.innerText = totalFinal;
+            
                 }
                 else {
                     alert('Please give numbers only for Coach budget.');
