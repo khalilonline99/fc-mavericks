@@ -1,8 +1,10 @@
+/*--------- A function which is used in another function ---------*/
+
 function alertMessage() {
     alert('Warning!! You cannot select more than Five Players');
 }
 
-
+/* Player selection button function, to collect their ids. It then called at click events. */
 function selectPlayer(playerName, playerSelected, buttonCardPlayer){
 
     const lengthPlayers = document.getElementById('player-selected').getElementsByTagName('li').length;
